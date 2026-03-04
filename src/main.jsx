@@ -4,6 +4,7 @@ import {BrowserRouter, Route, Routes} from "react-router";
 import Layout from "./components/Layout.jsx";
 import UserRegister from "./components/User/UserRegister.jsx";
 import UserLogin from "./components/User/UserLogin.jsx";
+import DashboardLayout from "./components/DashboardLayout.jsx";
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -14,8 +15,7 @@ createRoot(document.getElementById('root')).render(
             <Route path="/login" element={<UserLogin/>}/>
         </Route>
 
-        <Route path="/dashboard">
-
+        <Route path="/dashboard" element={<DashboardLayout/>}>
         </Route>
       </Routes>
     </BrowserRouter>
